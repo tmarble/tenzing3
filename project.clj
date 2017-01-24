@@ -1,6 +1,6 @@
 (defproject
   tenzing3
-  "0.2xs.0-SNAPSHOT"
+  "0.2.0-SNAPSHOT"
   :dependencies
   [[adzerk/boot-cljs "1.7.228-2" :scope "test"]
    [adzerk/boot-cljs-repl "0.3.3" :scope "test"]

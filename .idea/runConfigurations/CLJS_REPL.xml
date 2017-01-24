@@ -4,6 +4,8 @@
     <setting name="port" value="8082" />
     <setting name="replType" value="0" />
     <module name="tenzing3" />
-    <method />
+    <method>
+      <option name="Make" enabled="false" />
+    </method>
   </configuration>
 </component>
