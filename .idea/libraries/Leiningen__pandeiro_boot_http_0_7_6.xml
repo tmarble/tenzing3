@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Leiningen: pandeiro/boot-http:0.7.6">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/pandeiro/boot-http/0.7.6/boot-http-0.7.6.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
