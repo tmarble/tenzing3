@@ -1,5 +1,5 @@
 (set-env!
- :source-paths    #{"src/cljs"}
+ :source-paths    #{"src/cljs" "src/clj"}
  :resource-paths  #{"resources"}
  :dependencies '[[adzerk/boot-cljs          "1.7.228-2"  :scope "test"]
                  [adzerk/boot-cljs-repl     "0.3.3"      :scope "test"]
@@ -16,11 +16,17 @@
  '[adzerk.boot-reload    :refer [reload]]
  '[pandeiro.boot-http    :refer [serve]])
 
+(task-options!
+  serve {:dir "target"}
+  cljs {:source-map true}
+  )
+
+
 (deftask build []
   (comp (speak)
-
-        (cljs)
-        ))
+    (cljs)
+    (target :dir #{"target"})
+    ))
 
 (deftask run []
   (comp (serve)
@@ -36,7 +42,9 @@
 (deftask development []
   (task-options! cljs {:optimizations :none :source-map true}
     reload {:on-jsload 'tenzing3.app/init}
-    repl {:port 8082}
+    repl {
+          ;; :port 8082
+          :middleware '[cemerick.piggieback/wrap-cljs-repl]}
     )
   identity)
 
@@ -45,3 +53,11 @@
   []
   (comp (development)
         (run)))
+
+(deftask cider-boot
+  "Cider boot params task"
+  []
+  (comp
+    (cider)
+    (dev))
+  )
