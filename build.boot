@@ -43,7 +43,7 @@
   (task-options! cljs {:optimizations :none :source-map true}
     reload {:on-jsload 'tenzing3.app/init}
     repl {
-          ;; :port 8082
+          :port 8082
           :middleware '[cemerick.piggieback/wrap-cljs-repl]}
     )
   identity)
@@ -53,6 +53,15 @@
   []
   (comp (development)
         (run)))
+
+(deftask clj-dev
+  "Server side dev"
+  []
+  (comp
+    (repl :port 8081 :server true :init "src/clj/tenzing3/server.clj"
+      :init-ns 'tenzing3.server)
+    (wait))
+  )
 
 (deftask cider-boot
   "Cider boot params task"

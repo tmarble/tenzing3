@@ -6,4 +6,4 @@
     (aset c "innerHTML" "<p>i'm dynamically created</p>")
     (.. js/document (getElementById "container") (appendChild c))))
 
-(repl/connect "ws://localhost:9001")
+;; (repl/connect "ws://localhost:9001")

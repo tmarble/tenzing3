@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="CLJ REPL" type="ClojureREPL" factoryName="Remote">
+    <setting name="host" value="localhost" />
+    <setting name="port" value="8081" />
+    <setting name="replType" value="0" />
+    <module name="tenzing3" />
+    <method>
+      <option name="Make" enabled="false" />
+    </method>
+  </configuration>
+</component>
