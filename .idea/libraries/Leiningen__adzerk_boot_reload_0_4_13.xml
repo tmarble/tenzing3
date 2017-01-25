@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="Leiningen: adzerk/boot-reload:0.4.13">
-    <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/adzerk/boot-reload/0.4.13/boot-reload-0.4.13.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

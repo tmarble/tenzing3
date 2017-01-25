@@ -1,3 +1,5 @@
+;; This file should be placed in ~/.boot/
+
 (deftask cider "CIDER profile"
   []
   (swap! @(resolve 'boot.repl/*default-dependencies*)
@@ -10,11 +12,15 @@
              refactor-nrepl.middleware/wrap-refactor])
   identity)
 
+;; Leiningen compatability, FFI
+;; https://github.com/boot-clj/boot/wiki/Using-Boot-in-a-Leiningen-Project
+;; https://github.com/boot-clj/boot/wiki/Boot-for-Leiningen-Users
+
 (defn- generate-lein-project-file!
   [& {:keys [keep-project] :or {:keep-project true}}]
   (let [pfile ((resolve 'clojure.java.io/file) "project.clj")
   ;; (let [pfile (io/file "project.clj")
-        ;; Only works when pom options are set using task-options!
+  ;; Only works when pom options are set using task-options!
         {:keys [project version]} (:task-options (meta #'boot.task.built-in/pom))
         prop #(when-let [x (get-env %2)] [%1 x])
         head (list* 'defproject (or project 'boot-project)

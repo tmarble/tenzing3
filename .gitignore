@@ -1,4 +1,33 @@
-/target
-/.nrepl-port
-/out
+# Emacs backup files
 *~
+
+# Java
+/lib
+/pom.xml
+*.class
+
+# Clojure
+/target
+/out
+classes
+.lein-*
+.nrepl*
+
+# IntelliJ / Cursive
+/.idea/workspace.xml
+/.idea/replstate.xml
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/dictionaries
+/.idea/shelf
+/.idea/libraries
+/.idea/modules
+/*.iml
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight*
+.Trash*
+ehthumbs.db
+Thumbs.db

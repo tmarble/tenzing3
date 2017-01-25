@@ -1,11 +1,12 @@
 (ns tenzing3.server
-  (:require [clojure.pprint :as pp :refer [pprint]]
-            [clojure.string :as string]))
+  "Example Clojure server application (which doesn't serve anything yet)."
+  (:require [clojure.string :as string]))
 
-(defn sleep
-  "sleeps for the given number of seconds (may be fractional)"
-  [s]
-  (Thread/sleep (* 1000 s)))
+(def bar
+  "Example var"
+  {:a 123})
 
-(defn foo []
-  (println "foo"))
+(defn foo
+  "Example function"
+  [& args]
+  (println "foo with args:" args))

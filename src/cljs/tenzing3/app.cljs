@@ -1,9 +1,15 @@
 (ns tenzing3.app
-  (:require [weasel.repl :as repl]))
+  "Example ClojureScript client application."
+  (:require [clojure.string :as string]))
 
-(defn init []
+(enable-console-print!)
+
+(println "evaluating app.cljs")
+
+(defn init
+  "This initialization function will be called whenever this file is edited."
+  []
+  (println "updating HTML in #'init")
   (let [c (.. js/document (createElement "DIV"))]
     (aset c "innerHTML" "<p>i'm dynamically created</p>")
     (.. js/document (getElementById "container") (appendChild c))))
-
-;; (repl/connect "ws://localhost:9001")
