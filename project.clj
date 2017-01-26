@@ -11,4 +11,4 @@
    [weasel "0.7.0" :scope "test"]
    [org.clojure/clojurescript "1.9.293"]]
   :source-paths
-  ["src/cljs" "resources"])
+  ["src/cljs" "src/clj" "resources"])

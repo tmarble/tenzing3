@@ -3,7 +3,7 @@
   (:require [clojure.string :as string]))
 
 (def bar
-  "Example var"
+  "Example CLJ var"
   {:a 123})
 
 (defn foo
