@@ -35,7 +35,7 @@
     (notify
       :visual true
       :title "CLJS"
-      :messages {:success "http://localhost:3000 is ready"})
+      :messages {:success "http://localhost:3000 is ready\n"})
     (speak)
     (cljs)
     ;; (target :dir #{"target"})

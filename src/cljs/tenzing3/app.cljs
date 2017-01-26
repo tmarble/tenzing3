@@ -20,8 +20,11 @@
     (aset c "innerHTML" (str "<p>i'm dynamically created at " (js/Date) "</p>"))
     (.. js/document (getElementById "container") (appendChild c))))
 
+;; Set the value below to true if using IntelliJ/Cursive (otherwise set to false)
+;; see NOTE below
+(def cursive? true)
 
-(defonce weasel? (atom false)) ;; see NOTE below
+(defonce weasel? (atom cursive?)) ;; see NOTE below
 
 (when-not @weasel?  ;; see NOTE below
   ;; Connect via Weasel to nREPL for development
