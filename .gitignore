@@ -12,6 +12,7 @@
 classes
 .lein-*
 .nrepl*
+.cljs_rhino_repl/
 
 # IntelliJ / Cursive
 /.idea/workspace.xml

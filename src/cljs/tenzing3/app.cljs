@@ -8,7 +8,7 @@
 
 (def baz
   "Example CLJS var"
-  {:b 457})
+  {:b 456})
 
 (println "evaluating app.cljs, baz:" baz)
 
@@ -19,6 +19,7 @@
   (let [c (.. js/document (createElement "DIV"))]
     (aset c "innerHTML" (str "<p>i'm dynamically created at " (js/Date) "</p>"))
     (.. js/document (getElementById "container") (appendChild c))))
+
 
 (defonce weasel? (atom false)) ;; see NOTE below
 
@@ -36,5 +37,5 @@
 ;;    Error: No method in multimethod 'adzerk.boot-reload.client/handle' for dispatch value:
 ;; Which suggests that when handle is called
 ;; https://github.com/adzerk-oss/boot-reload/blob/master/src/adzerk/boot_reload/client.cljs#L35
-;; that (:type msg) is nil.
+;; that (:type msg) is nil. (hey, shouldn't there be a default multimethod??)
 ;; Perhaps this is a timing issue?
