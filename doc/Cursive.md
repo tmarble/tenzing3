@@ -24,7 +24,8 @@ For further information
 4. Select Leiningen project to import ![lein import](images/lein-import.png)
 5. Select the project SDK (IDE SDK)  ![ide sdk](images/ide-sdk.png)
 6. Enter a project name:  ![project name](images/project-name.png)
-7. Accept the warning about `.idea` ![.idea warning](images/idea-warning.png)
+7. Accept the warning about `.idea` <br/> ![.idea warning](images/idea-warning.png)
+
 
 Now the project should be imported:
 ![project ready](images/project-ready.png)
@@ -32,9 +33,11 @@ Now the project should be imported:
 ## Add CLJS REPL configuration
 
 Under the arrow on the upper right select "Edit Configurations...":
+
 ![edit configurations](images/edit-config.png)
 
 Click the "+" symbol and add a Clojure, Remote REPL:
+
 ![add clojure remote](images/add-clojure-remote.png)
 
 Set the parameters for the CLJS REPL:
@@ -57,9 +60,11 @@ Set the parameters for the CLJ REPL:
 ## Open a Terminal, start the CLJS nREPL
 
 Hover over the icon on the lower left and click on "Terminal":
+
 ![terminal](images/terminal.png)
 
 Start the CLJS nREPL server by typing `boot cljs-dev`:
+
 ![CLJS nREPL](images/cljs-nrepl.png)
 
 When all the ClojureScript files have been compiled you
@@ -82,6 +87,7 @@ Reload websocket connected.
 
 In the configuration menu on the upper right select "CLJS REPL" and
 press the "Play" (triangle) icon:
+
 ![start cljs](images/start-cljs.png)
 
 You will now see a new CLJS REPL window. *NOTE:* the input area
@@ -95,8 +101,8 @@ Open the `app.cljs` file by clicking in the `src/cljs/tenzing3` directory
 and then in the main application menu select: **Tools | REPL | Load file in REPL**
 
 This will evaluate the file so all the symbols are defined in the REPL. At
-this point you can change the namespace to `tenzing3.app` (enter in the
-input area `(in-ns 'tenzing3.app)`) and evaluate a simple symbol: `baz`.
+this point you can change the namespace to `tenzing3.app` by entering in the
+input area: `(in-ns 'tenzing3.app)` and then evaluate a simple symbol: `baz`.
 
 You should see `{:b 456}` in the CLJS REPL.
 
@@ -127,8 +133,9 @@ Open the `server.clj` file by clicking in the `src/clj/tenzing3` directory
 and then in the main application menu select: **Tools | REPL | Load file in REPL**
 
 This will evaluate the file so all the symbols are defined in the REPL. At
-this point you can change the namespace to `tenzing3.server` (enter in the
-input area `(in-ns 'tenzing3.server)`) and evaluate a simple symbol: `bar`.
+this point you can change the namespace to `tenzing3.server` by entering in the
+input area: `(in-ns 'tenzing3.server)`and then evaluate a simple symbol: `bar`.
+
 You should see `{:a 123}` in the CLJ REPL.
 
 Then you can a function by typing `(foo bar)` in the REPL input area:
