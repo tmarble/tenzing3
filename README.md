@@ -19,9 +19,10 @@ and/or [CIDER](https://github.com/clojure-emacs/cider) when using
 
 ## Make dual CLJS + CLJ REPL connections
 
-See the notes on using
-* [CIDER](doc/CIDER.md)
+Continue setting up in one (or both) of...
+
 * [Cursive](doc/Cursive.md)
+* [CIDER](doc/CIDER.md)
 
 ## Next Steps
 
@@ -35,11 +36,11 @@ There's an unfortunate workaround I've had to use to convince
 Weasel to connect properly with CIDER.  See the note in `app.cljs`
 for details. Let me know if you can help fix this!
 
-## Acknowledgements
+## Acknowledgments
 
 Major thanks go to [Colin Fleming](https://twitter.com/colinfleming),
 the lead [Cursive developer](https://cursive-ide.com/), who spent
-a ton of time with my on [Clojurians Slack](http://clojurebridge-minneapolis.github.io/slack.html) **#cursive** to help me work out the Cursive integration.
+a ton of time with me on [Clojurians Slack](http://clojurebridge-minneapolis.github.io/slack.html) **#cursive** to help me work out the Cursive integration.
 
 Thanks to [Bozhidar Batsov](https://twitter.com/bbatsov), Mr. `M-x`
 of [CIDER](https://github.com/clojure-emacs/cider) making sure

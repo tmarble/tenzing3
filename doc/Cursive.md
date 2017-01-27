@@ -1,7 +1,7 @@
 # Running tenzing3 with Cursive
 
 The Prerequisite setup is in the [README](../README.md)
-See also running with [CIDER](CIDER.md)
+(See also running with [CIDER](CIDER.md))
 
 ## Background for Cursive users
 
