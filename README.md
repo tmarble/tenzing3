@@ -46,7 +46,7 @@ of [CIDER](https://github.com/clojure-emacs/cider) making sure
 that [Emacs Rocks](https://twitter.com/EmacsRocks)!
 
 Thanks to [Martin Klepsch](https://twitter.com/martinklepsch) for
-creating the [tenzing](https://twitter.com/martinklepsch) boot
+creating the [tenzing](https://github.com/martinklepsch/tenzing)
 ClojureScript application template using Boot on which **tenzing3**
 is based.
 

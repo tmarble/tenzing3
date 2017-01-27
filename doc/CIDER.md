@@ -15,9 +15,9 @@ Now you can customize your CIDER configuration. Start by
 entering `M-x customize`, enter "cider" in the search box,
 and press **Search**.
 
-1. Make sure the **Cider Boot Command** has the fully qualified path to where
+* Make sure the **Cider Boot Command** has the fully qualified path to where
    you installed **boot** (usually in `~/bin`).
-2. Set your **Cider Boot Parameters** to `cider-boot` <br/>
+* Set your **Cider Boot Parameters** to `cider-boot` <br/>
    When you `cider-jack-in` this will call the `cider-boot` task
    in your `build.boot` file. If, for other projects, you don't
    need to do any extra steps prior to running the `cider` task
@@ -29,8 +29,8 @@ and press **Search**.
   []
   (cider))
  ```
- 3. Set **Cider Cljs Lein Repl** to `Weasel`
- 4. For all the variables you changed be sure to click on **State**
+* Set **Cider Cljs Lein Repl** to `Weasel`
+* For all the variables you changed be sure to click on **State**
     and select "Save for future sessions"
 
 ## Visit app.cljs
@@ -40,7 +40,7 @@ Visit [app.cljs](https://github.com/tmarble/tenzing3/blob/master/src/cljs/tenzin
 to
 `(def cursive? false)`
 
-## Start CLJS REPL
+## Start the CLJS REPL
 
 Now you're ready to `M-x cider-jack-in-clojurescript` (on **C-c M-J**).
 
@@ -50,7 +50,7 @@ will take a little while to run and set things up...
 You will then see the question (because we have both `build.boot` and `project.clj` files), then enter "boot":
 
 ```
-**Which command should be used (default lein):** boot
+Which command should be used (default lein): boot
 ```
 
 In the buffer **cider-repl CLJS tenzing3** you will see
@@ -65,12 +65,14 @@ You will then see this question and answer "n":
 Visit 'http://localhost:3000' in a browser? (y or n) n
 ```
 
-Because we do want to visit that web page, but at this point
+...because we do want to visit that web page, but at this point
 not all the ClojureScript files have been compiled (so let's
 be patient)!
 
 When everything is ready you should hear an audible sound
-and see a notification `CLJS: http://localhost:3000 is ready`
+and see a notification
+
+`CLJS: http://localhost:3000 is ready`
 
 *Now* you can open (or reload) [http://localhost:3000](http://localhost:3000)
 
@@ -88,6 +90,7 @@ namespace for `app.cljs` like this:
 
 ```
 boot.user> (in-ns 'tenzing3.app)
+tenzing3.app>
 ```
 
 Now visit the `app.cljs` buffer and enter `M-x cider-eval-buffer`: this
@@ -120,6 +123,7 @@ namespace for `server.clj` like this:
 
 ```
 boot.user> (in-ns 'tenzing3.server)
+tenzing3.server>
 ```
 
 Now visit the `server.clj` buffer and enter `M-x cider-eval-buffer`: this
