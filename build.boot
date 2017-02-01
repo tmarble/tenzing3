@@ -59,12 +59,12 @@
 
 (deftask development
   "Example task to change ClojureScript options for development"
-  []
+  [p port PORT int "The port for the ClojureScript nREPL"]
   (task-options!
     cljs {:optimizations :none :source-map true}
     reload {;; :ws-port 9001
             :on-jsload 'tenzing3.app/init}
-    repl {:port 8082
+    repl {:port (or port 8082)
           :middleware '[cemerick.piggieback/wrap-cljs-repl]})
   identity)
 
@@ -72,18 +72,18 @@
 ;; can connect to for the CLJS REPL.
 (deftask cljs-dev
   "Starts CLJS nREPL"
-  []
-  (comp (development)
+  [p port PORT int "The port for the ClojureScript nREPL"]
+  (comp (development :port port)
         (run)))
 
 ;; This will start an nREPL server on 8081 that a remote IDE
 ;; can connect to for the CLJ REPL.
 (deftask clj-dev
   "Starts CLJ nREPL"
-  []
+  [p port PORT int "The port for the Clojure nREPL"]
   (comp
     (repl
-      :port 8081
+      :port (or port 8081)
       :server true
       :init "src/clj/tenzing3/server.clj"
       :init-ns 'tenzing3.server)
